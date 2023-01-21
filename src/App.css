@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.form-control {
+  margin: 3%, 20% 3%, 20%;
+}
+.uppercase {
+  text-transform: capitalize;
+}
