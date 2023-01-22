@@ -9,12 +9,15 @@ const TextAreabox = (props) => {
     let newText = text.toLowerCase();
     updatedText(newText);
   };
+  const clearText = () => {
+    document.getElementById("floatingTextarea2").value = "";
+  };
   const handleOnChange = (event) => {
     updatedText(event.target.value);
   };
   const [text, updatedText] = useState("");
   return (
-    <div className="container">
+    <div>
       <h2>{props.heading}</h2>
       <div className="container my-3">
         <textarea
@@ -26,13 +29,22 @@ const TextAreabox = (props) => {
           onChange={handleOnChange}
         />
       </div>
-      <button className="btn btn-primary mx-2" onClick={upperCaseText}>
-        Convert to UpperCase
-      </button>
-      <button className="btn btn-primary mx-2" onClick={lowerCaseText}>
-        Convert to LowerCase
-      </button>
-      <button className="btn btn-primary mx-2">Edit</button>
+      <div className="container">
+        <button className="btn btn-primary mx-1" onClick={upperCaseText}>
+          Convert to UpperCase
+        </button>
+        <button className="btn btn-primary mx-1" onClick={lowerCaseText}>
+          Convert to LowerCase
+        </button>
+        <button className="btn btn-primary mx-1" onClick={clearText}>
+          Clear Text Area
+        </button>
+        {/* <button className="btn btn-primary mx-2">Edit</button> */}
+        <h2 className="my-3">Text Summary</h2>
+        <p className="mx-3">
+          {text.split(" ").length} Words and {text.length} Characters
+        </p>
+      </div>
     </div>
   );
 };

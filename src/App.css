@@ -39,6 +39,9 @@
 .form-control {
   margin: 3%, 20% 3%, 20%;
 }
-.uppercase {
-  text-transform: capitalize;
+.btn-primary {
+  position: relative;
+  justify-content: flex-start;
+  align-items: left;
+  text-align: left;
 }

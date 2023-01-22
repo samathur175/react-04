@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Compnents/Navbar";
-import TextAreabox from "./Compnents/NewComp";
+import TextAreabox from "./Compnents/Textarr";
 
 function App() {
   return (
