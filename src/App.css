@@ -40,8 +40,11 @@
   margin: 3%, 20% 3%, 20%;
 }
 .btn-primary {
+  text-align: left;
   position: relative;
   justify-content: flex-start;
   align-items: left;
-  text-align: left;
+}
+body {
+  background-color: #e8f0f2;
 }
