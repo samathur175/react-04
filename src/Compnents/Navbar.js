@@ -1,9 +1,11 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             TextUtils
@@ -33,7 +35,7 @@ const Navbar = () => {
               </li>
               {/* <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  classNameName="nav-link dropdown-toggle"
                   href="/"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -66,6 +68,23 @@ const Navbar = () => {
                 <a className="nav-link disabled">Disabled</a>
               </li> */}
             </ul>
+            <label
+              className={`form-check-label text-${
+                props.mode === "light" ? "dark" : "light"
+              } me-3`}
+              htmlFor="flexSwitchCheckDefault"
+            >
+              Enable DarkMode
+            </label>
+            <div className="form-check form-switch">
+              <input
+                onClick={props.toggleMode}
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+              />
+            </div>
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
