@@ -18,7 +18,9 @@ const TextAreabox = (props) => {
   const [text, updatedText] = useState("");
   return (
     <div>
-      <h2>{props.heading}</h2>
+      <h2 style={{ color: props.mode === "light" ? "dark" : "light" }}>
+        {props.heading}
+      </h2>
       <div className="container my-3">
         <textarea
           className="form-control"
@@ -29,7 +31,10 @@ const TextAreabox = (props) => {
           onChange={handleOnChange}
         />
       </div>
-      <div className="container">
+      <div
+        className="container"
+        style={{ color: props.mode === "light" ? "dark" : "light" }}
+      >
         <button className="btn btn-primary mx-1" onClick={upperCaseText}>
           Convert to UpperCase
         </button>
